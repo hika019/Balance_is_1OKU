@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "貯金1億！",
+  "short name": "貯金1億！",
+  "version": "1.0.0.0",
+  "description": "住友銀行の口座残高を1億円にする",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://direct3.smbc.co.jp/*"
+      ],
+      "js": ["main.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "background",
+    "http://*/*",
+    "https://*/*"
+  ]
+
+}
